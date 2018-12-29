@@ -11,7 +11,7 @@ export class ProductService {
   selectedProduct: Product = new Product();
 
   constructor(private firebase:AngularFireDatabase) { }
-  getProduct(){
+  getProducts(){
     return this.productList = this.firebase.list('products');
     
   }

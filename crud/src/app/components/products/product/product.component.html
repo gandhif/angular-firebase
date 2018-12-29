@@ -1,3 +1,51 @@
-<p>
-  product works!
-</p>
+<div class="cards mt-5">
+  <div class="card-body">
+       <form #formularioProducto="ngForm" (ngSubmit)="onSubmit(formularioProducto)">
+        
+            <div class="from-group">
+           <input 
+            type="text"
+            class="form-control"
+            name="name"
+            #name="ngModel"
+            [(ngModel)]="productService.selectedProduct.name"
+            placeholder="Agregar Nombre Producto"
+            > 
+            </div>
+
+            <div class="form-group">
+            <input
+            type="text"
+            class="form-control"
+            name="category"
+            #category="ngModel"
+            [(ngModel)]="productService.selectedProduct.category"
+            placeholder="Agregar Categoria Producto"
+            >
+            </div>
+
+            <div class="form-group">
+              <input
+              type="text"
+              class="form-control"
+              name="location"
+              #location="ngModel"
+              [(ngModel)]="productService.selectedProduct.location"
+              placeholder="Agregar Localizacion Producto"
+              >
+            </div>
+
+            <div class="from-group">
+              <input
+              type="text"
+              class="form-control"
+              name="price"
+              #price="ngModel"
+              [(ngModel)]="productService.selectedProduct.price"
+              placeholder="Agregar Price Producto"
+              >
+            </div>       
+
+      </form> 
+  </div>
+</div>
